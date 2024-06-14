@@ -16,10 +16,10 @@ function ErrorPage() {
   }
 
   return (
-    <>
+    <div style={{ margin: '0.5em', textAlign: 'center' }}>
       <h2>{title}</h2>{title}
         <p>{message}</p>
-    </>
+    </div>
   );
 }
 

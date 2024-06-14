@@ -8,7 +8,9 @@ import Home , {
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Root from './pages/Root';
-import Details from './pages/Details';
+import Details, {
+  loader as loaderItem,
+} from './pages/Details';
 import ErrorPage from './pages/Error';
 
 const router = createBrowserRouter([
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:eventId',
         id: 'event-detail',
+        loader: loaderItem,
         element: <Details />,
       },
       {
@@ -34,12 +37,18 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact />,
       },
+      {
+        path: '/404',
+        element: <ErrorPage />,
+      },
     ]
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+      <RouterProvider router={router} />
+  );
 }
 
 export default App;

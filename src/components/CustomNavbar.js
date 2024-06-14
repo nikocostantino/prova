@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 function CustomNavbar() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+    <Navbar bg="light" data-bs-theme="light">
+      <Navbar.Brand href="/" style={{ marginLeft: '0.5em' }}>React-Bootstrap</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
